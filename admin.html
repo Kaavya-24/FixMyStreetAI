@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard | FixMyStreetAI</title>
+  <link rel="stylesheet" href="adminstyle.css" />
+</head>
+<body>
+
+  <!-- 🔗 Top Navigation -->
+  <nav class="top-nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">ℹ️ About</a>
+    <a href="citizen.html">🧑 Citizen</a>
+    <a href="admin.html" class="active">👮 Admin</a>
+    <a href="superadmin.html">🛡️ Super Admin</a>
+    <a href="faq.html" class="active">❓ FAQ & Help</a>
+  </nav>
+
+  <!-- 🌇 Main Layout -->
+  <div class="container">
+    <!-- Sidebar with Buttons -->
+    <div class="sidebar">
+      <h2>🛠 Admin Panel</h2>
+      <button onclick="showSection('viewReports')">View Reports</button>
+      <button onclick="showSection('changeStatus')">Change Status</button>
+      <button onclick="showSection('assignTasks')">Assign Tasks</button>
+      <button onclick="showSection('sendNotification')">Send Notifications</button>
+    </div>
+
+    <!-- Vertical Curved Divider -->
+    <div class="curve-divider"></div>
+
+    <!-- Content Area -->
+    <div class="content">
+      <!-- View Reports -->
+      <section id="viewReports" class="section">
+        <h2>📄 View Reports</h2>
+        <form class="form-box">
+          <label>Location:</label>
+          <select><option>--Select--</option><option>Chennai</option><option>Delhi</option></select>
+
+          <label>Type:</label>
+          <select><option>--Select--</option><option>Pothole</option><option>Water Leak</option></select>
+
+          <label>Status:</label>
+          <select><option>--Select--</option><option>New</option><option>In Progress</option><option>Resolved</option></select>
+
+          <label>Date Range:</label>
+          <input type="date" /> to <input type="date" />
+
+          <button type="submit" class="action-btn">Search</button>
+        </form>
+      </section>
+
+      <!-- Change Status -->
+      <section id="changeStatus" class="section">
+        <h2>🔄 Change Report Status</h2>
+        <form class="form-box">
+          <label>Grievance ID:</label>
+          <input type="text" />
+
+          <label>Status:</label><br>
+          <input type="radio" name="status" value="new"> New
+          <input type="radio" name="status" value="inprogress"> In Progress
+          <input type="radio" name="status" value="resolved"> Resolved
+
+          <br><br>
+          <button type="submit" class="action-btn">Update Status</button>
+        </form>
+      </section>
+
+      <!-- Assign Tasks -->
+      <section id="assignTasks" class="section">
+        <h2>📌 Assign Task</h2>
+        <form class="form-box">
+          <label>Department:</label>
+          <select><option>--Select--</option><option>Road</option><option>Electric</option></select>
+
+          <label>City:</label>
+          <select><option>--Select--</option><option>Bangalore</option><option>Mumbai</option></select>
+
+          <label>Level:</label>
+          <select><option>Taluk</option><option>Panchayat</option></select>
+
+          <label>Problem Type:</label>
+          <select><option>Pothole</option><option>Streetlight</option></select>
+
+          <label>Problem Description:</label>
+          <textarea rows="3"></textarea>
+
+          <label>Deadline:</label>
+          <input type="date" />
+
+          <button type="submit" class="action-btn">Assign</button>
+        </form>
+      </section>
+
+      <!-- Send Notification -->
+      <section id="sendNotification" class="section">
+        <h2>📢 Send Notification</h2>
+        <form class="form-box">
+          <label>Grievance ID:</label>
+          <input type="text" />
+
+          <label>Message:</label>
+          <textarea rows="4"></textarea>
+
+          <button type="submit" class="action-btn">Send</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <!-- JS for Section Switching -->
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('.section').forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(sectionId).style.display = 'block';
+    }
+
+    // Show View Reports by default
+    showSection('viewReports');
+  </script>
+
+</body>
+</html>
