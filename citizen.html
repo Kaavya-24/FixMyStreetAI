@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixMyStreetAI | Citizen</title>
+  <link rel="stylesheet" href="citizenstyle.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">ℹ️ About</a>
+    <a  href="citizen.html">🧑 Citizen</a>
+    <a href="admin.html">👮 Admin</a>
+    <a href="superadmin.html">🛡️ Super Admin</a>
+    <a href="faq.html" class="active">❓ FAQ & Help</a>
+  </nav>
+
+  <!-- Container -->
+  <div class="background">
+    <div class="form-container">
+
+      <!-- Citizen Information Form -->
+      <form class="form-box">
+        <h2>Citizen Information</h2>
+        <p class="mandatory">* Mandatory Fields</p>
+
+        <label>* Name:</label>
+        <input type="text" required>
+
+        <label>* Contact No:</label>
+        <input type="tel" required>
+
+        <label>Alternative Phone No:</label>
+        <input type="tel">
+
+        <label>* Email:</label>
+        <input type="email" required>
+
+        <label>* District:</label>
+        <select required>
+          <option value="">--Select--</option>
+          <option>Tirunelveli</option>
+          <option>Chennai</option>
+          <option>Coimbatore</option>
+        </select>
+
+        <label>* Block:</label>
+        <select required>
+          <option value="">--Select--</option>
+          <option>Urban</option>
+          <option>Rural</option>
+        </select>
+
+        <label>* Village:</label>
+        <select required>
+          <option value="">--Select--</option>
+          <option>Village A</option>
+          <option>Village B</option>
+        </select>
+
+        <label>* Address:</label>
+        <textarea rows="3" required></textarea>
+      </form>
+
+      <!-- Grievance Form -->
+      <form class="form-box">
+        <h2>Register Grievance</h2>
+        <p class="mandatory">* Mandatory Fields</p>
+
+        <label>* Service Related To:</label>
+        <select required>
+          <option value="">--Select--</option>
+          <option>Water</option>
+          <option>Road</option>
+          <option>Electricity</option>
+        </select>
+
+        <label>* Complain Level:</label>
+        <select required>
+          <option value="">--Select--</option>
+          <option>Panchayat</option>
+          <option>Block</option>
+          <option>District</option>
+        </select>
+
+        <label>* Complain Type:</label>
+        <select required>
+          <option value="">--Select--</option>
+          <option>Pothole</option>
+          <option>Street Light</option>
+          <option>Garbage</option>
+        </select>
+
+        <label>* Complaint Details:</label>
+        <textarea rows="4" required></textarea>
+
+        <button type="submit">SUBMIT</button>
+      </form>
+
+    </div>
+  </div>
+</body>
+</html>
