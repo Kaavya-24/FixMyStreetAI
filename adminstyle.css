@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://yuva.info/wp-content/uploads/2022/07/the-most-popular-social-issues-in-india.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* Top Navigation */
+.top-nav {
+  background-color: rgba(40, 40, 40, 0.9);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.top-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.top-nav a:hover,
+.top-nav a.active {
+  background-color:#C19A6B;
+  color: white;
+}
+
+/* Main Layout */
+.container {
+  display: flex;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 25%;
+  background-color: rgba(72, 61, 50, 0.95);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.sidebar h2 {
+  margin-bottom: 2rem;
+  color: #f2f2f2;
+}
+
+.sidebar button {
+  background-color: #C19A6B;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  margin: 10px 0;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar button:hover {
+  background-color: white;
+  color: #5c4033;
+}
+
+/* Curved Divider */
+.curve-divider {
+  width: 30px;
+  background: radial-gradient(circle at center, #999 1%, transparent 70%);
+  clip-path: ellipse(60% 100% at 0% 50%);
+}
+
+/* Content Panel */
+.content {
+  flex: 1;
+  padding: 3rem;
+  overflow-y: auto;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(4px);
+}
+
+/* Section Styling */
+.section {
+  display: none;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+/* Form Box */
+.form-box {
+  background: rgba(255,255,255,0.08);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  color: white;
+}
+
+.form-box label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.form-box input[type="text"],
+.form-box input[type="date"],
+.form-box select,
+.form-box textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  background-color: rgba(255,255,255,0.9);
+  color: #000;
+}
+
+.form-box input[type="radio"] {
+  margin-right: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Action Buttons */
+.action-btn {
+  background-color: #5c4033;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background-color: white;
+  color:#C19A6B;
+}
