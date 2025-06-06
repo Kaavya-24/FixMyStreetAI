@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Super Admin Panel</title>
+  <link rel="stylesheet" href="superadminstyle.css" />
+</head>
+<body>
+
+  <!-- 🔗 Navigation Bar -->
+  <nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">ℹ️ About</a>
+    <a href="citizen.html">🧑 Citizen</a>
+    <a href="admin.html">👮 Admin</a>
+    <a href="superadmin.html" class="active">🛡️ Super Admin</a>
+    <a href="faq.html" class="active">❓ FAQ & Help</a>
+  </nav>
+
+  <!-- 🌟 Super Admin Panel -->
+  <div class="container">
+    <div class="left" id="formContainer">
+      <!-- Forms appear here -->
+      <form id="login" class="form hidden">
+        <h2>Login</h2>
+        <label>Name</label>
+        <input type="text" placeholder="Name" required />
+        <label>Enter id</label>
+        <input type="text" placeholder="ID" required />
+        <label>Enter password</label>
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+
+      <form id="add" class="form hidden">
+        <h2>Add Admin</h2>
+        <input type="text" placeholder="Admin Name" required />
+        <input type="text" placeholder="Admin ID" required />
+        <label>Select district</label>
+        <select>
+          <option>Tirunelveli</option>
+          <option>Chennai</option>
+          <option>Coimbatore</option>
+          <option>Erode</option>
+          <option>Salem</option>
+        </select>
+        <input type="date" required />
+        <input type="email" placeholder="Email" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <button type="submit">Add</button>
+      </form>
+
+      <form id="update" class="form hidden">
+        <h2>Update Admin</h2>
+        <label>Select district</label>
+        <select>
+          <option>Tirunelveli</option>
+          <option>Chennai</option>
+          <option>Coimbatore</option>
+          <option>Erode</option>
+          <option>Salem</option>
+        </select>
+        <input type="text" placeholder="Old Admin ID" required />
+        <input type="text" placeholder="New Admin ID" required />
+        <button type="submit">Update</button>
+      </form>
+
+      <form id="remove" class="form hidden">
+        <h2>Remove Admin</h2>
+        <input type="text" placeholder="Admin ID" required />
+        <button type="submit">Remove</button>
+      </form>
+
+      <form id="monitor" class="form hidden">
+        <h2>Monitor Complaints</h2>
+         <label>Select district</label>
+        <select>
+          <option>Tirunelveli</option>
+          <option>Chennai</option>
+          <option>Coimbatore</option>
+          <option>Erode</option>
+          <option>Salem</option>
+        </select>
+         <label>Select level</label>
+        <select>
+        <option>panchayat</option>
+          <option>taluk</option>
+          <option>Village</option>
+          
+        </select>
+        <button type="submit">View</button>
+      </form>
+
+      <form id="announce" class="form hidden">
+        <h2>Announcements</h2>
+        <textarea placeholder="Enter policy changes or emergency updates"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <div class="right">
+      <h1>Super Admin Panel</h1>
+      <div class="buttons">
+        <button onclick="showForm('login')">Login</button>
+        <button onclick="showForm('add')">Add Admin</button>
+        <button onclick="showForm('update')">Update Admin</button>
+        <button onclick="showForm('remove')">Remove Admin</button>
+        <button onclick="showForm('monitor')">Monitor Complaints</button>
+        <button onclick="showForm('announce')">Announcements</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showForm(id) {
+      document.querySelectorAll('.form').forEach(form => form.classList.add('hidden'));
+      const form = document.getElementById(id);
+      form.classList.remove('hidden');
+      form.classList.add('bloom');
+      setTimeout(() => form.classList.remove('bloom'), 500);
+    }
+  </script>
+</body>
+</html>
