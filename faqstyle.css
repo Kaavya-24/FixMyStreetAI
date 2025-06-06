@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f0ff;
+  color: #333;
+  animation: blurToClear 1s ease forwards;
+  filter: blur(8px);
+}
+
+@keyframes blurToClear {
+  to {
+    filter: blur(0);
+  }
+}
+
+nav {
+  background-color: #ae58eb;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav .active {
+  background-color: white;
+  color: #ae58eb;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.tutorial h1,
+.video-section h2,
+.usage h2,
+.ask-help h2 {
+  color: #6a1a9c;
+  margin-bottom: 10px;
+}
+
+.tutorial ol {
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.video-section video {
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.usage progress {
+  width: 100%;
+  height: 25px;
+  appearance: none;
+  -webkit-appearance: none;
+  margin-bottom: 10px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 20px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #ae58eb;
+  border-radius: 20px;
+}
+
+/* Table styling */
+.usage table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.usage th, .usage td {
+  border: 1px solid #ae58eb;
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.usage th {
+  background-color: #ae58eb;
+  color: white;
+  font-weight: 600;
+}
+
+.usage tbody tr:nth-child(even) {
+  background-color: #f2e9ff;
+}
+
+.usage tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.ask-help textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.ask-help button {
+  background-color: #ae58eb;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ask-help button.clicked {
+  background-color: white;
+  color: #ae58eb;
+  border: 1px solid #ae58eb;
+}
