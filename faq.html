@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ & Help Center</title>
+  <link rel="stylesheet" href="faqstyle.css" />
+</head>
+<body class="fade-in">
+  <nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">ℹ️ About</a>
+    <a href="citizen.html">🧑 Citizen</a>
+    <a href="admin.html">👮 Admin</a>
+    <a href="superadmin.html">🛡️ Super Admin</a>
+    <a href="faq.html" class="active">❓ FAQ & Help</a>
+  </nav>
+
+  <div class="container">
+    <section class="tutorial">
+      <h1>📌 Step-by-Step Guide for First-Time Users</h1>
+      <ol>
+        <li>Register or log in to your citizen account.</li>
+        <li>Navigate to the "Report Issue" section.</li>
+        <li>Fill in the issue description, location.</li>
+        <li>Submit the complaint and note your Complaint ID.</li>
+        <li>Track the status of your complaint under "Track Complaint".</li>
+      </ol>
+    </section>
+
+    <section class="video-section">
+      <video width="600" controls>
+        <source src="video.mov" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section class="usage">
+      <h2>📊 App Usage Level</h2>
+      <progress value="85" max="100"></progress>
+      <p>Citizens across 85% of wards actively use this platform.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Complaints Solved (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2019</td><td>72%</td></tr>
+          <tr><td>2020</td><td>78%</td></tr>
+          <tr><td>2021</td><td>83%</td></tr>
+          <tr><td>2022</td><td>87%</td></tr>
+          <tr><td>2023</td><td>90%</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="ask-help">
+      <h2>📝 Still have doubts?</h2>
+      <textarea placeholder="Ask your questions here..."></textarea>
+      <button id="findHelpBtn" onclick="toggleHelpButton()">Find Help</button>
+    </section>
+  </div>
+
+  <script>
+    function toggleHelpButton() {
+      const btn = document.getElementById("findHelpBtn");
+      btn.classList.toggle("clicked");
+    }
+  </script>
+</body>
+</html>
